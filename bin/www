@@ -12,14 +12,15 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '40551');
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
-
 var server = http.createServer(app);
+var io = require('socket.io')(http);
+app.startIo(io);
 
 /**
  * Listen on provided port, on all network interfaces.
