@@ -6,4 +6,5 @@ router.get('/', function(req, res, next) {
   res.render("chat.html", {valor: "minha string legal"});
 });
 
+
 module.exports = router;

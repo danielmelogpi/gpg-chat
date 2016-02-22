@@ -1,0 +1,22 @@
+.msg {
+
+border: 1px solid #cdcdcd;
+background: #dedede;
+padding: 7px;
+margin: 5px;
+width: 50%;
+}
+
+.msg-mine {
+    float: right;
+}
+.msg-mine:before {
+    content: "Me: "
+}
+.msg-theirs {
+    float: left;
+}
+.msg-theirs:before {
+    content: "Remote: ";
+    text-weight: bold;
+}

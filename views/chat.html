@@ -4,13 +4,26 @@
         <meta charset="utf-8">
         <title>Chat GPG</title>
         <link rel="stylesheet" href="/third/bootstrap-3.3.6/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/chat.css"/>
         <script src="/socket.io/socket.io.js"></script>
         <script>
           var socket = io();
         </script>
     </head>
     <body>
-        asdasddasd
+        <div id="identity-selection-holder" class="col-md-6">
+            Qual identidade deseja usar?
+            <select id="identity-selection" class="form-control col-md-2"></select>
+            <a class="btn btn-success col-md-3" href="#" id="identity-selected-btn">Selecionar</a>
+        </div>
+        <div id="chat-area" class="hidden col-md-12">
+            Destinatario: <select id="destination" class="form-control col-md-2"></select>
+            <div id="chat-messages" class="col-md-12" style="height:200px; display: block">
+                &nbsp;
+            </div>
+            <input type="text" class="form-control" id="new-msg-text" />
+            <input type="button" class="btn btn-success" value="Enviar" id="new-msg-send"/>
+        </div>
     </body>
 
     <script src="/third/jquery/jquery-1.12.0.min.js"></script>
